@@ -49,3 +49,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# libbt-vendor
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    bluetooth.default
+
