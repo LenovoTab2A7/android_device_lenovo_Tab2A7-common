@@ -2,5 +2,6 @@
 #define _BDROID_BUILDCFG_H
 
 #define BTM_DEF_LOCAL_NAME   "Tab2A710F"
+#define BTA_AV_MAX_A2DP_MTU  1788
 
 #endif
