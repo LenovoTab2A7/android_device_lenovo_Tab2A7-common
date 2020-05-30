@@ -38,3 +38,6 @@ ro.sys.usb.bicr=yes
 # USB Charge only function
 ro.sys.usb.charging.only=yes
 
+# add support for USB storage type
+persist.sys.isUsbOtgEnabled=1
+
