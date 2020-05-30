@@ -49,3 +49,6 @@ ro.radio.noril=1
 ro.carrier=wifi-only
 persist.radio.noril=1
 
+# Disable dirty region for Mali
+debug.hwui.render_dirty_regions=false
+
