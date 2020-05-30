@@ -81,3 +81,6 @@ WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC := true
 WITH_DEXPREOPT_COMP := false
 
+TARGET_LDPRELOAD += \
+    libxlog.so
+

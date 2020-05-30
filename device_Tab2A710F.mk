@@ -38,3 +38,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/meta_init.rc:root/meta_init.rc \
     $(LOCAL_PATH)/ramdisk/meta_init.project.rc:root/meta_init.project.rc
 
+# libxlog
+PRODUCT_PACKAGES += \
+    libxlog
+
