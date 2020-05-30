@@ -18,7 +18,7 @@ else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
