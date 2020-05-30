@@ -150,3 +150,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgralloc.default
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio_policy.default \
+    audio_policy.stub \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio.primary.default \
+    libaudio-resampler
+

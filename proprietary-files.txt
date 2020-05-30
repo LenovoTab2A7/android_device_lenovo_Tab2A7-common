@@ -1,11 +1,5 @@
 system/lib/hw/keystore.default.so
 system/lib/hw/power.default.so
-system/lib/hw/audio_policy.default.so
-system/lib/hw/audio_policy.stub.so
-system/lib/hw/audio.primary.default.so
-system/lib/hw/audio.r_submix.default.so
-system/lib/hw/audio.usb.default.so
-system/lib/libaudio-resampler.so
 system/lib/hw/vibrator.default.so
 system/lib/libcameraanalyzer.so
 
