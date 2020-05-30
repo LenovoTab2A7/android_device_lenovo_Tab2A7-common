@@ -1,5 +1,4 @@
 system/lib/hw/keystore.default.so
-system/lib/hw/power.default.so
 system/lib/hw/vibrator.default.so
 system/lib/libcameraanalyzer.so
 

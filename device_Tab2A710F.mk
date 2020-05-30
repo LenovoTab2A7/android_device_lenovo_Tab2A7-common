@@ -160,3 +160,7 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     libaudio-resampler
 
+# Power
+PRODUCT_PACKAGES += \
+    power.default
+
