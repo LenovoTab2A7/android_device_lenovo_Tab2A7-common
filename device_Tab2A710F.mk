@@ -20,6 +20,8 @@ endif
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
+$(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Ramdisk
