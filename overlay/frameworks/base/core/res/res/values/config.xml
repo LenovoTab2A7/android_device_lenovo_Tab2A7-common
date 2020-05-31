@@ -88,4 +88,8 @@
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
 
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+
 </resources>
