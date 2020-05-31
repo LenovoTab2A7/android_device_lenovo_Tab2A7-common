@@ -75,3 +75,9 @@ MAX_EGL_CACHE_SIZE := 1024*1024
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
+# Enable dex-preoptimization to speed up the first boot sequence
+WITH_DEXPREOPT := true
+#WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+WITH_DEXPREOPT_PIC := true
+WITH_DEXPREOPT_COMP := false
+
