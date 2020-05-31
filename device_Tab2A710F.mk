@@ -146,3 +146,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libion
 
+# libgralloc.default
+PRODUCT_PACKAGES += \
+    libgralloc.default
+
