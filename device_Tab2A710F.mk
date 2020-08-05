@@ -30,6 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.mt8127.rc:root/init.mt8127.rc \
     $(LOCAL_PATH)/ramdisk/init.mt8127.usb.rc:root/init.mt8127.usb.rc \
+    $(LOCAL_PATH)/ramdisk/init.mt8127.power.rc:root/init.mt8127.power.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.mt8127.rc:root/ueventd.mt8127.rc \
     $(LOCAL_PATH)/ramdisk/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/ramdisk/init.aee.rc:root/init.aee.rc \
