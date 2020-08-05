@@ -54,3 +54,5 @@ debug.hwui.render_dirty_regions=false
 
 drm.service.enabled=true
 
+ro.mediatek.version.release=T2-A7-10F_S000057_160701_ROW
+
