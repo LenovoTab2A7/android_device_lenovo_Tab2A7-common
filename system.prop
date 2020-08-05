@@ -52,3 +52,5 @@ persist.radio.noril=1
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
 
+drm.service.enabled=true
+
