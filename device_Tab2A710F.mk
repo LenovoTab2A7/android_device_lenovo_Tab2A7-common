@@ -164,3 +164,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.default
 
+# keystore
+PRODUCT_PACKAGES += \
+    keystore.default
+
