@@ -168,3 +168,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.default
 
+# vibrator.default
+PRODUCT_PACKAGES += \
+    vibrator.default
+

@@ -1,6 +1,4 @@
-system/lib/hw/vibrator.default.so
 system/lib/libcameraanalyzer.so
-
 system/lib/libgralloc_extra.so
 system/lib/libion_mtk.so
 system/lib/libcurl.so
