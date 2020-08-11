@@ -199,7 +199,6 @@ on fs
     write /proc/bootprof "INIT:eMMC:Mount_START"
     mount_all /fstab.mt8127
     write /proc/bootprof "INIT:eMMC:Mount_END"
-    mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
     
     #change partition permission
     exec /system/etc/partition_permission.sh 
