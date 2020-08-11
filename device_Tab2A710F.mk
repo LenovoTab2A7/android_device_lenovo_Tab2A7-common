@@ -21,10 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Ramdisk
-# Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.mt8127.rc:root/init.mt8127.rc \
-    $(LOCAL_PATH)/ramdisk/init.mt8127usb.rc:root/init.mt8127usb.rc \
+    $(LOCAL_PATH)/ramdisk/init.mt8127.usb.rc:root/init.mt8127.usb.rc \
     $(LOCAL_PATH)/ramdisk/ueventd.mt8127.rc:root/ueventd.mt8127.rc \
     $(LOCAL_PATH)/ramdisk/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/ramdisk/init.aee.rc:root/init.aee.rc \
