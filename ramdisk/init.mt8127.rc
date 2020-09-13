@@ -97,7 +97,7 @@ on init
  
     # Change SMI driver permission   
     chmod 0660 /dev/MTK_SMI
-    chown system media /dev/MTK_SMI
+    chown system camera	/dev/MTK_SMI
 
     # Use uinput's default permission
     chown system net_bt_admin /dev/uinput
