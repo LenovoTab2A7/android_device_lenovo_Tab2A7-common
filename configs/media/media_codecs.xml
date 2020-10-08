@@ -75,6 +75,9 @@ Only the three quirks included above are recognized at this point:
 -->
 
 <MediaCodecs>
+    <Settings>
+        <Setting name="max-video-encoder-input-buffers" value="10" />
+    </Settings>
     <Include href="media_codecs_mediatek_video.xml" />
     <Include href="media_codecs_ffmpeg.xml" />
     <Include href="media_codecs_google_audio.xml" />
