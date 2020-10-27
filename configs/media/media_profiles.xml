@@ -102,7 +102,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -136,7 +136,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -170,7 +170,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -204,7 +204,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -238,7 +238,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -272,7 +272,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
@@ -306,7 +306,7 @@
         </EncoderProfile>
 
         <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
-            <Video codec="h264"
+            <Video codec="m4v"
                    bitRate="192000"
                    width="176"
                    height="144"
