@@ -67,3 +67,31 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     hostapd
 
+# mtk_omx
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+
+# thermal config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
+
+# Wifi config files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+
+# Bluetooth config files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
+    $(LOCAL_PATH)/configs/bluetooth/btconfig.xml:system/etc/bluetooth/btconfig.xml
+
+# media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
+
+# Audio policy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+
