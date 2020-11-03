@@ -94,7 +94,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -106,7 +106,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="20" />
             <!-- audio setting is ignored -->
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -128,7 +128,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -140,7 +140,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="30" />
+                   frameRate="20" />
             <!-- audio setting is ignored -->
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -162,7 +162,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -196,7 +196,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -230,7 +230,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -264,7 +264,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
@@ -298,7 +298,7 @@
                    bitRate="128000"
                    width="320"
                    height="240"
-                   frameRate="15" />
+                   frameRate="20" />
             <Audio codec="amrnb"
                    bitRate="12200"
                    sampleRate="8000"
