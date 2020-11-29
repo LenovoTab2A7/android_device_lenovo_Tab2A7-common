@@ -35,7 +35,6 @@ system/lib/hw/audio.primary.mt8127.so
 system/lib/hw/camera.mt8127.so
 system/lib/hw/gralloc.mt8127.so
 system/lib/hw/hwcomposer.mt8127.so
-system/lib/hw/sensors.mt8127.so
 system/lib/lib_uree_mtk_crypto.so
 system/lib/lib_uree_mtk_video_secure_al.so
 system/lib/lib3a.so
@@ -56,24 +55,19 @@ system/lib/libcam_hwutils.so
 system/lib/libcam_mmp.so
 system/lib/libcam_platform.so
 system/lib/libcam_utils.so
-system/lib/libcam.camadapter.so
 system/lib/libcam.campipe.so
 system/lib/libcam.camshot.so
 system/lib/libcam.client.so
 system/lib/libcam.device1.so
 system/lib/libcam.exif.so
-system/lib/libcam.paramsmgr.so
 system/lib/libcam.utils.sensorlistener.so
 system/lib/libcam.utils.so
 system/lib/libcamalgo.so
-system/lib/libcamdrv.so
 system/lib/libcamera_client_mtk.so
 system/lib/libcamera_metadata.so
-system/lib/libcameracustom.so
 system/lib/libcustom_nvram.so
 system/lib/libcvsd_mtk.so
 system/lib/libdpframework.so
-system/lib/libdrmmtkutil.so
 system/lib/libfeatureio.so
 system/lib/libfile_op.so
 system/lib/libGdmaScalerPipe.so
@@ -165,7 +159,6 @@ system/lib/libmnl.so
 system/xbin/mnld
 
 # Vendor
-system/vendor/lib/hw/audio.a2dp.blueangel.so
 system/vendor/lib/hw/bluetooth.blueangel.so
 system/vendor/lib/libstagefright_soft_ddpdec.so
 system/vendor/lib/soundfx/libswdap.so
@@ -185,7 +178,6 @@ system/lib/libperfservicenative.so
 # Related to charging animation
 system/lib/libshowlogo.so
 system/bin/factory
-system/etc/factory.ini
 system/bin/ipod
 
 # Firmware
@@ -193,5 +185,4 @@ system/etc/firmware/ROMv2_patch_1_0_hdr.bin
 system/etc/firmware/ROMv2_patch_1_1_hdr.bin
 system/etc/firmware/WIFI_RAM_CODE_8127
 system/etc/firmware/WMT_SOC.cfg
-system/etc/firmware/S_ANDRO_SFL.ini
 

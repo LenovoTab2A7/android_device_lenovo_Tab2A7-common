@@ -1,4 +1,4 @@
-OVERLAY_BIN := device/lenovo/Tab2A710F/overlay-binaries
+OVERLAY_BIN := device/lenovo/Tab2A7-common/overlay-binaries
 
 # Install init.d scripts
 PRODUCT_COPY_FILES += \

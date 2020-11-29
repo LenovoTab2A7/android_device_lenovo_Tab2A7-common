@@ -1,49 +1,45 @@
-LOCAL_PATH := device/lenovo/Tab2A710F
+COMMON_DEVICE_PATH := device/lenovo/Tab2A7-common
+COMMON_VENDOR_PATH := vendor/lenovo/Tab2A7-common
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/lenovo/Tab2A710F/Tab2A710F-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/Tab2A7-common/Tab2A7-common-vendor.mk)
+$(call inherit-product-if-exists, device/lenovo/Tab2A7-common/overlay-binaries/overlay-binaries.mk)
 
-$(call inherit-product, $(LOCAL_PATH)/overlay-binaries/overlay-binaries.mk)
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_DEVICE_PATH)/overlay
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
-
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
-
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+# Common properties
+$(call inherit-product, $(COMMON_DEVICE_PATH)/common_prop.mk)
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/init.mt8127.rc:root/init.mt8127.rc \
-    $(LOCAL_PATH)/ramdisk/init.mt8127.usb.rc:root/init.mt8127.usb.rc \
-    $(LOCAL_PATH)/ramdisk/init.mt8127.power.rc:root/init.mt8127.power.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.mt8127.rc:root/ueventd.mt8127.rc \
-    $(LOCAL_PATH)/ramdisk/init.project.rc:root/init.project.rc \
-    $(LOCAL_PATH)/ramdisk/init.aee.rc:root/init.aee.rc \
-    $(LOCAL_PATH)/ramdisk/init.ssd.rc:root/init.ssd.rc \
-    $(LOCAL_PATH)/ramdisk/init.charging.rc:root/init.charging.rc \
-    $(LOCAL_PATH)/ramdisk/fstab:root/fstab \
-    $(LOCAL_PATH)/ramdisk/fstab.mt8127:root/fstab.mt8127 \
-    $(LOCAL_PATH)/ramdisk/enableswap.sh:root/enableswap.sh \
-    $(LOCAL_PATH)/ramdisk/auto_shutdown.sh:root/auto_shutdown.sh \
-    $(LOCAL_PATH)/ramdisk/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/ramdisk/factory_init.project.rc:root/factory_init.project.rc \
-    $(LOCAL_PATH)/ramdisk/meta_init.rc:root/meta_init.rc \
-    $(LOCAL_PATH)/ramdisk/meta_init.project.rc:root/meta_init.project.rc
+    $(COMMON_DEVICE_PATH)/ramdisk/init.mt8127.rc:root/init.mt8127.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.mt8127.usb.rc:root/init.mt8127.usb.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.mt8127.power.rc:root/init.mt8127.power.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/ueventd.mt8127.rc:root/ueventd.mt8127.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.project.rc:root/init.project.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.aee.rc:root/init.aee.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.ssd.rc:root/init.ssd.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/init.charging.rc:root/init.charging.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/fstab:root/fstab \
+    $(COMMON_DEVICE_PATH)/ramdisk/fstab.mt8127:root/fstab.mt8127 \
+    $(COMMON_DEVICE_PATH)/ramdisk/enableswap.sh:root/enableswap.sh \
+    $(COMMON_DEVICE_PATH)/ramdisk/auto_shutdown.sh:root/auto_shutdown.sh \
+    $(COMMON_DEVICE_PATH)/ramdisk/factory_init.rc:root/factory_init.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/factory_init.project.rc:root/factory_init.project.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/meta_init.rc:root/meta_init.rc \
+    $(COMMON_DEVICE_PATH)/ramdisk/meta_init.project.rc:root/meta_init.project.rc
 
 # libxlog
 PRODUCT_PACKAGES += \
@@ -66,9 +62,9 @@ PRODUCT_PACKAGES += \
 
 # hostapd config files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
+    $(COMMON_DEVICE_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(COMMON_DEVICE_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(COMMON_DEVICE_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny
 
 # hostapd
 PRODUCT_PACKAGES += \
@@ -76,41 +72,42 @@ PRODUCT_PACKAGES += \
 
 # mtk_omx
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    $(COMMON_DEVICE_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 # thermal config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
-    $(LOCAL_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
+    $(COMMON_DEVICE_PATH)/configs/thermal/thermal.conf:system/etc/.tp/thermal.conf \
+    $(COMMON_DEVICE_PATH)/configs/thermal/thermal.off.conf:system/etc/.tp/thermal.off.conf
 
 # Wifi config files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    $(COMMON_DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(COMMON_DEVICE_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(COMMON_DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # Bluetooth config files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
-    $(LOCAL_PATH)/configs/bluetooth/btconfig.xml:system/etc/bluetooth/btconfig.xml
+    $(COMMON_DEVICE_PATH)/configs/bluetooth/bt_did.conf:system/etc/bluetooth/bt_did.conf \
+    $(COMMON_DEVICE_PATH)/configs/bluetooth/btconfig.xml:system/etc/bluetooth/btconfig.xml
 
 # media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
+    $(COMMON_DEVICE_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(COMMON_DEVICE_PATH)/configs/media/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
+    $(COMMON_DEVICE_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
 
 # Audio policy
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+    $(COMMON_DEVICE_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+    $(COMMON_DEVICE_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.audio.output.xml:system/etc/permissions/android.hardware.audio.output.xml \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
